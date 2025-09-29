@@ -18,7 +18,7 @@ export default function Results({input}){
                 let totalInterest = yearData.valueEndOfYear - yearData.annualInvestment * yearData.year - initialInvestment;
                 let investedCapital = yearData.valueEndOfYear - totalInterest;
                 return <tr key={yearData.year}>
-                    <td>{formatter.format(yearData.year)}</td>
+                    <td>{yearData.year}</td>
                     <td>{formatter.format(yearData.valueEndOfYear)}</td>
                     <td>{formatter.format(yearData.interest)}</td>
                     <td>{formatter.format(totalInterest)}</td>
