@@ -1,11 +1,15 @@
+import {useContext} from 'react';
+import {CartContext} from "../store/CartContext.jsx"
+
 export default function Product({
   id,
   image,
   title,
   price,
   description,
-  onAddToCart,
 }) {
+  let {onAddToCart} = useContext(CartContext);
+
   return (
     <article className="product">
       <img src={image} alt={title} />
